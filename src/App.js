@@ -20,6 +20,7 @@ const AppTheme = {
     secondary2: "#EDE5FF",
     secondary3: "#F6F2FF",
     neutral1: "#4F4F4F",
+    neutral2: "#828282",
   },
 
   breakpoints: {
