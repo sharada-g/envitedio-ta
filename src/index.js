@@ -12,7 +12,7 @@ import reportWebVitals from "./reportWebVitals";
 // global styles for the entire app
 const IndexStyle = createGlobalStyle`
     body {
-    background-color: #F6F2FF;
+    background: linear-gradient(0deg, #F6F2FF, #F6F2FF), #FBFAFF;;
     margin: 0;
     font-family: -apple-system, 'Helvetica Neue';
     -webkit-font-smoothing: antialiased;

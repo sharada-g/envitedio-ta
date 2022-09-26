@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
+import { EventContextProvider } from "./contexts/eventContext";
+
 import { ThemeProvider } from "styled-components";
 
 // import components
@@ -17,6 +19,7 @@ const AppTheme = {
     secondary1: "#CCB6FF",
     secondary2: "#EDE5FF",
     secondary3: "#F6F2FF",
+    neutral1: "#4F4F4F",
   },
 
   breakpoints: {
@@ -28,12 +31,14 @@ const AppTheme = {
 function App() {
   return (
     <ThemeProvider theme={AppTheme}>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/create" element={<EventCreate />} />
-        <Route path="/event" element={<EventView />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <EventContextProvider>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/create" element={<EventCreate />} />
+          <Route path="/event" element={<EventView />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </EventContextProvider>
     </ThemeProvider>
   );
 }
